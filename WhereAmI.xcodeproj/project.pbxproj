@@ -12,6 +12,9 @@
 		D36E4A6B1CC9117800337486 /* question@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D36E4A691CC9117800337486 /* question@2x.png */; };
 		D36E4A6D1CC918AF00337486 /* WACreateQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36E4A6C1CC918AF00337486 /* WACreateQuestionViewController.swift */; };
 		D36E4A6F1CC91BA200337486 /* WAQuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36E4A6E1CC91BA200337486 /* WAQuestionsViewController.swift */; };
+		D38839001CCFA1C9006914A1 /* WACollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38838FF1CCFA1C9006914A1 /* WACollectionViewFlowLayout.swift */; };
+		D38839021CCFA8D3006914A1 /* WACollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38839011CCFA8D3006914A1 /* WACollectionViewCell.swift */; };
+		D38839041CCFB049006914A1 /* WAQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38839031CCFB049006914A1 /* WAQuestion.swift */; };
 		D3A4B5201CC7D4410086C6DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A4B51F1CC7D4410086C6DF /* AppDelegate.swift */; };
 		D3A4B5271CC7D4420086C6DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3A4B5261CC7D4420086C6DF /* Assets.xcassets */; };
 		D3A4B5351CC7DAD50086C6DF /* WAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A4B5341CC7DAD50086C6DF /* WAViewController.swift */; };
@@ -24,6 +27,9 @@
 		D36E4A691CC9117800337486 /* question@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "question@2x.png"; sourceTree = "<group>"; };
 		D36E4A6C1CC918AF00337486 /* WACreateQuestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WACreateQuestionViewController.swift; sourceTree = "<group>"; };
 		D36E4A6E1CC91BA200337486 /* WAQuestionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WAQuestionsViewController.swift; sourceTree = "<group>"; };
+		D38838FF1CCFA1C9006914A1 /* WACollectionViewFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WACollectionViewFlowLayout.swift; sourceTree = "<group>"; };
+		D38839011CCFA8D3006914A1 /* WACollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WACollectionViewCell.swift; sourceTree = "<group>"; };
+		D38839031CCFB049006914A1 /* WAQuestion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WAQuestion.swift; sourceTree = "<group>"; };
 		D3A4B51C1CC7D4410086C6DF /* WhereAmI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhereAmI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3A4B51F1CC7D4410086C6DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3A4B5261CC7D4420086C6DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -118,6 +124,8 @@
 				D3A4B5371CC7DBA90086C6DF /* WARegisterViewController.swift */,
 				D36E4A6C1CC918AF00337486 /* WACreateQuestionViewController.swift */,
 				D36E4A6E1CC91BA200337486 /* WAQuestionsViewController.swift */,
+				D38838FF1CCFA1C9006914A1 /* WACollectionViewFlowLayout.swift */,
+				D38839011CCFA8D3006914A1 /* WACollectionViewCell.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -125,6 +133,7 @@
 		D3A4B5391CC7ED2F0086C6DF /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				D38839031CCFB049006914A1 /* WAQuestion.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -252,8 +261,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D38839001CCFA1C9006914A1 /* WACollectionViewFlowLayout.swift in Sources */,
 				D3A4B5351CC7DAD50086C6DF /* WAViewController.swift in Sources */,
 				D36E4A6D1CC918AF00337486 /* WACreateQuestionViewController.swift in Sources */,
+				D38839041CCFB049006914A1 /* WAQuestion.swift in Sources */,
+				D38839021CCFA8D3006914A1 /* WACollectionViewCell.swift in Sources */,
 				D36E4A6F1CC91BA200337486 /* WAQuestionsViewController.swift in Sources */,
 				D3A4B5381CC7DBA90086C6DF /* WARegisterViewController.swift in Sources */,
 				D3A4B5201CC7D4410086C6DF /* AppDelegate.swift in Sources */,
