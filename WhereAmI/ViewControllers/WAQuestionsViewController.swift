@@ -114,7 +114,10 @@ class WAQuestionsViewController: WAViewController, UICollectionViewDelegate, UIC
     func createQuestion(btn: UIBarButtonItem){
         print("createQuestion")
         
-        presentViewController(WACreateQuestionViewController(), animated: true, completion: nil)
+        let createQuestionVc = WACreateQuestionViewController()
+        presentViewController(createQuestionVc, animated: true, completion: {
+            createQuestionVc.animateTextFields()
+        })
     }
     
     func configureCell(cell: WACollectionViewCell, indexPath :NSIndexPath){
