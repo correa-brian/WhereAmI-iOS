@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		56E8ABB911B2001F54DF252E /* Pods_WhereAmI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED10159D44FBC9382ACE1614 /* Pods_WhereAmI.framework */; };
+		D341FD981CD27B94009350A0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D341FD971CD27B94009350A0 /* Constants.swift */; };
 		D36E4A6A1CC9117800337486 /* profile@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D36E4A681CC9117800337486 /* profile@2x.png */; };
 		D36E4A6B1CC9117800337486 /* question@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D36E4A691CC9117800337486 /* question@2x.png */; };
 		D36E4A6D1CC918AF00337486 /* WACreateQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36E4A6C1CC918AF00337486 /* WACreateQuestionViewController.swift */; };
@@ -15,6 +16,9 @@
 		D38839001CCFA1C9006914A1 /* WACollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38838FF1CCFA1C9006914A1 /* WACollectionViewFlowLayout.swift */; };
 		D38839021CCFA8D3006914A1 /* WACollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38839011CCFA8D3006914A1 /* WACollectionViewCell.swift */; };
 		D38839041CCFB049006914A1 /* WAQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38839031CCFB049006914A1 /* WAQuestion.swift */; };
+		D3A482361CD0F25B009DA60C /* WAQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A482351CD0F25B009DA60C /* WAQuestionViewController.swift */; };
+		D3A482381CD11984009DA60C /* green-check.png in Resources */ = {isa = PBXBuildFile; fileRef = D3A482371CD11984009DA60C /* green-check.png */; };
+		D3A4823A1CD1198E009DA60C /* x-mark.png in Resources */ = {isa = PBXBuildFile; fileRef = D3A482391CD1198E009DA60C /* x-mark.png */; };
 		D3A4B5201CC7D4410086C6DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A4B51F1CC7D4410086C6DF /* AppDelegate.swift */; };
 		D3A4B5271CC7D4420086C6DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3A4B5261CC7D4420086C6DF /* Assets.xcassets */; };
 		D3A4B5351CC7DAD50086C6DF /* WAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A4B5341CC7DAD50086C6DF /* WAViewController.swift */; };
@@ -23,6 +27,7 @@
 
 /* Begin PBXFileReference section */
 		781F448877EDF161C62F1E50 /* Pods-WhereAmI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhereAmI.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WhereAmI/Pods-WhereAmI.debug.xcconfig"; sourceTree = "<group>"; };
+		D341FD971CD27B94009350A0 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D36E4A681CC9117800337486 /* profile@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "profile@2x.png"; sourceTree = "<group>"; };
 		D36E4A691CC9117800337486 /* question@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "question@2x.png"; sourceTree = "<group>"; };
 		D36E4A6C1CC918AF00337486 /* WACreateQuestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WACreateQuestionViewController.swift; sourceTree = "<group>"; };
@@ -30,6 +35,9 @@
 		D38838FF1CCFA1C9006914A1 /* WACollectionViewFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WACollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		D38839011CCFA8D3006914A1 /* WACollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WACollectionViewCell.swift; sourceTree = "<group>"; };
 		D38839031CCFB049006914A1 /* WAQuestion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WAQuestion.swift; sourceTree = "<group>"; };
+		D3A482351CD0F25B009DA60C /* WAQuestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WAQuestionViewController.swift; sourceTree = "<group>"; };
+		D3A482371CD11984009DA60C /* green-check.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "green-check.png"; sourceTree = "<group>"; };
+		D3A482391CD1198E009DA60C /* x-mark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "x-mark.png"; sourceTree = "<group>"; };
 		D3A4B51C1CC7D4410086C6DF /* WhereAmI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhereAmI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3A4B51F1CC7D4410086C6DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3A4B5261CC7D4420086C6DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -72,6 +80,8 @@
 		D36E4A671CC9117800337486 /* icons */ = {
 			isa = PBXGroup;
 			children = (
+				D3A482371CD11984009DA60C /* green-check.png */,
+				D3A482391CD1198E009DA60C /* x-mark.png */,
 				D36E4A681CC9117800337486 /* profile@2x.png */,
 				D36E4A691CC9117800337486 /* question@2x.png */,
 			);
@@ -106,6 +116,7 @@
 				D3A4B51F1CC7D4410086C6DF /* AppDelegate.swift */,
 				D3A4B5261CC7D4420086C6DF /* Assets.xcassets */,
 				D3A4B52B1CC7D4420086C6DF /* Info.plist */,
+				D341FD971CD27B94009350A0 /* Constants.swift */,
 			);
 			path = WhereAmI;
 			sourceTree = "<group>";
@@ -126,6 +137,7 @@
 				D36E4A6E1CC91BA200337486 /* WAQuestionsViewController.swift */,
 				D38838FF1CCFA1C9006914A1 /* WACollectionViewFlowLayout.swift */,
 				D38839011CCFA8D3006914A1 /* WACollectionViewCell.swift */,
+				D3A482351CD0F25B009DA60C /* WAQuestionViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -202,7 +214,9 @@
 			files = (
 				D36E4A6B1CC9117800337486 /* question@2x.png in Resources */,
 				D36E4A6A1CC9117800337486 /* profile@2x.png in Resources */,
+				D3A482381CD11984009DA60C /* green-check.png in Resources */,
 				D3A4B5271CC7D4420086C6DF /* Assets.xcassets in Resources */,
+				D3A4823A1CD1198E009DA60C /* x-mark.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,6 +280,8 @@
 				D36E4A6D1CC918AF00337486 /* WACreateQuestionViewController.swift in Sources */,
 				D38839041CCFB049006914A1 /* WAQuestion.swift in Sources */,
 				D38839021CCFA8D3006914A1 /* WACollectionViewCell.swift in Sources */,
+				D341FD981CD27B94009350A0 /* Constants.swift in Sources */,
+				D3A482361CD0F25B009DA60C /* WAQuestionViewController.swift in Sources */,
 				D36E4A6F1CC91BA200337486 /* WAQuestionsViewController.swift in Sources */,
 				D3A4B5381CC7DBA90086C6DF /* WARegisterViewController.swift in Sources */,
 				D3A4B5201CC7D4410086C6DF /* AppDelegate.swift in Sources */,

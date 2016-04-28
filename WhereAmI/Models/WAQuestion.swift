@@ -16,6 +16,7 @@ class WAQuestion: NSObject {
     var image: String!
     var imageData: UIImage!
     var isFetching = false
+    var status = 0 // 0=unanswered, 1 = answered correctly, 2 = answered incorrectly
     
     func populate(info: Dictionary<String, AnyObject>){
         
@@ -41,7 +42,7 @@ class WAQuestion: NSObject {
             return
         }
         
-        let url = "https://media-service.appspot.com/site/images/"+self.image+"?crop=240"
+        let url = "https://media-service.appspot.com/site/images/"+self.image+"?crop=640"
         self.isFetching = true
         Alamofire.request(.GET, url, parameters: nil).response { (request, response, data, error) in
             

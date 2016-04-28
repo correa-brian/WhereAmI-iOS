@@ -11,6 +11,7 @@ import UIKit
 class WACollectionViewCell: UICollectionViewCell {
     
     var imageView: UIImageView!
+    var answerIcon: UIImageView!
     
     required init?(coder aDecoder: NSCoder){
         super.init(coder: aDecoder)
@@ -19,9 +20,17 @@ class WACollectionViewCell: UICollectionViewCell {
     override init(frame: CGRect){
         super.init(frame: frame)
         
+        let width = frame.size.width
+        let height = frame.size.height
+        
         self.imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: frame.size.width, height: frame.size.height))
         self.imageView.backgroundColor = UIColor.lightGrayColor()
         self.contentView.addSubview(self.imageView)
+        
+        self.answerIcon = UIImageView(frame: CGRect(x: 0, y: 0, width: width, height: height))
+        self.answerIcon.backgroundColor = UIColor.blackColor()
+        self.answerIcon.alpha = 0
+        self.contentView.addSubview(self.answerIcon)
         
 //        let colors = [
 //            UIColor.greenColor(),

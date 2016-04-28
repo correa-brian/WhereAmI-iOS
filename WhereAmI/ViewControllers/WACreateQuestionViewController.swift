@@ -39,12 +39,20 @@ class WACreateQuestionViewController: WAViewController, UITextFieldDelegate, UII
         
         y += self.questionImage.frame.size.height+24
         
-        padding = 20
-        let width = frame.size.width-2*padding
+        padding = CGFloat(6)
+        
+        let dimen = frame.size.width
+        let width = dimen-2*padding
+        
+        y = dimen + padding
+        let height = CGFloat(32)
+        
+        let offScreen = frame.size.height
         
         for i in 0..<4 {
-            let textField = UITextField(frame: CGRect(x: padding, y: y, width: width, height: 32))
+            let textField = UITextField(frame: CGRect(x: padding, y: offScreen, width: width, height: height))
             textField.delegate = self
+            textField.tag = Int(y)
             textField.borderStyle = .RoundedRect
             textField.placeholder = (i==0) ? "Correct Answer" : "Option \(i+1)" //to set each indiviually use hash table
             textField.returnKeyType = (i==3) ? .Done : .Next
@@ -89,6 +97,22 @@ class WACreateQuestionViewController: WAViewController, UITextFieldDelegate, UII
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        for i in 0..<self.textFields.count {
+            
+            UIView.animateWithDuration(1.35,
+                                       delay: (0.5+Double(i)*0.1),
+                                       usingSpringWithDamping: 0.5,
+                                       initialSpringVelocity: 0.0,
+                                       options: .CurveEaseInOut,
+                                       animations: {
+                                        let textField = self.textFields[i]
+                                        var textFieldFrame = textField.frame
+                                        textFieldFrame.origin.y = CGFloat(textField.tag)
+                                        textField.frame = textFieldFrame
+                },
+                                       completion: nil)
+        }
 
     }
     
@@ -110,8 +134,7 @@ class WACreateQuestionViewController: WAViewController, UITextFieldDelegate, UII
     }
     
     func createQuestion(btn: UIButton){
-        
-        
+
         if(self.questionImage.image == nil){
             let alert = UIAlertController(title: "Missing Image",
                                           message: "Your forgot to add an image",
@@ -219,23 +242,31 @@ class WACreateQuestionViewController: WAViewController, UITextFieldDelegate, UII
         params["options"] = options
         print("Submit Question: \(params)")
         
-        let url = "http://localhost:3000/api/question"
+        let url = Constants.baseUrl+"/api/question"
         
         Alamofire.request(.POST, url, parameters: params).responseJSON { response in
             if let JSON = response.result.value as? Dictionary<String, AnyObject> {
                 print("\(JSON)")
                 
-                dispatch_async(dispatch_get_main_queue(), {
+                if let result = JSON["result"] as? Dictionary<String, AnyObject>{
+                    dispatch_async(dispatch_get_main_queue(), {
+                        let q = WAQuestion()
+                        q.populate(result)
+                        
+                        let nofiticationCenter = NSNotificationCenter.defaultCenter()
+                        let notification = NSNotification(name: "QuestionCreated", object: nil, userInfo: ["question":q])
+                        nofiticationCenter.postNotification(notification)
                     
-                    self.loadingScreen.alpha = 0
-                    self.spinner.alpha = 0
-                    self.spinner.stopAnimating()
+                        self.loadingScreen.alpha = 0
+                        self.spinner.alpha = 0
+                        self.spinner.stopAnimating()
                     
-                    self.dismissViewControllerAnimated(true, completion: nil)
-                })
+                        self.dismissViewControllerAnimated(true, completion: nil)
+                    })
+                }
             }
-        }
         
+        }
     }
     
     func takePicture(sender: UIButton){
