@@ -96,19 +96,14 @@ class WACreateQuestionViewController: WAViewController, UITextFieldDelegate, UII
         
         self.view = view
     }
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        print("viewdidLoad")
-        
+    
+    func animateTextFields(){
         for i in 0..<self.textFields.count {
-        
             UIView.animateWithDuration(1.35,
-                                       delay: 3,
+                                       delay: 0,
                                        usingSpringWithDamping: 0.5,
                                        initialSpringVelocity: 0.0,
-                                       options: .CurveEaseIn,
+                                       options: .CurveEaseInOut,
                                        animations: {
                                         
                                         print("Animations Here")
@@ -119,7 +114,13 @@ class WACreateQuestionViewController: WAViewController, UITextFieldDelegate, UII
                 },
                                        completion: nil)
         }
+        
+    }
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        print("viewdidLoad")
     }
     
     //MARK: My Functions
