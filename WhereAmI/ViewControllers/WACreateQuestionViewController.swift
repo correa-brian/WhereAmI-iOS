@@ -37,28 +37,30 @@ class WACreateQuestionViewController: WAViewController, UITextFieldDelegate, UII
         btnSelectImage.addTarget(self, action: #selector(WACreateQuestionViewController.takePicture(_:)), forControlEvents: .TouchUpInside)
         view.addSubview(btnSelectImage)
         
-        y += self.questionImage.frame.size.height+24
+        y += self.questionImage.frame.size.height+14
         
-        padding = CGFloat(6)
+        padding = CGFloat(14)
         
-        let dimen = frame.size.width
-        let width = dimen-2*padding
+        dimension = frame.size.width
+        let width = dimension-2*padding
         
-        y = dimen + padding
-        let height = CGFloat(32)
+        let height = CGFloat(44)
         
         let offScreen = frame.size.height
         
         for i in 0..<4 {
+            
             let textField = UITextField(frame: CGRect(x: padding, y: offScreen, width: width, height: height))
             textField.delegate = self
             textField.tag = Int(y)
+            
             textField.borderStyle = .RoundedRect
-            textField.placeholder = (i==0) ? "Correct Answer" : "Option \(i+1)" //to set each indiviually use hash table
+            textField.placeholder = (i==0) ? "Correct Answer" : "Option \(i+1)"
             textField.returnKeyType = (i==3) ? .Done : .Next
+            
             view.addSubview(textField)
             self.textFields.append(textField)
-            y += textField.frame.size.height+16
+            y += textField.frame.size.height+padding
         }
         
         dimension = 0.5 * (frame.size.width-(3*padding))
@@ -98,14 +100,18 @@ class WACreateQuestionViewController: WAViewController, UITextFieldDelegate, UII
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        print("viewdidLoad")
+        
         for i in 0..<self.textFields.count {
-            
+        
             UIView.animateWithDuration(1.35,
-                                       delay: (0.5+Double(i)*0.1),
+                                       delay: 3,
                                        usingSpringWithDamping: 0.5,
                                        initialSpringVelocity: 0.0,
-                                       options: .CurveEaseInOut,
+                                       options: .CurveEaseIn,
                                        animations: {
+                                        
+                                        print("Animations Here")
                                         let textField = self.textFields[i]
                                         var textFieldFrame = textField.frame
                                         textFieldFrame.origin.y = CGFloat(textField.tag)

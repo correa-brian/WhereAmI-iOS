@@ -34,7 +34,7 @@ class WARegisterViewController: WAViewController, UITextFieldDelegate {
         let width = frame.size.width
         let height = CGFloat(32)
         
-        var y = CGFloat(72)
+        var y = CGFloat(150)
         
         for field in fields{
             let textfield = UITextField(frame: CGRect(x: padding, y: y, width: width-2*padding, height: height))

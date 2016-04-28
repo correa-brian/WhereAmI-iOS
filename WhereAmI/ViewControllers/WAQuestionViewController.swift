@@ -59,25 +59,6 @@ class WAQuestionViewController: WAViewController {
             y += btn.frame.size.height+padding
         }
         
-//        let firstBtn = UIButton(type: .Custom)
-////        firstBtn.frame = CGRect(x: 0, y: y, width: dimen, height: 44)
-//        firstBtn.frame = CGRect(x: 0, y: frame.size.height, width: dimen, height: 44)
-//        firstBtn.tag = Int(y)
-//        firstBtn.backgroundColor = .redColor()
-//        view.addSubview(firstBtn)
-//        self.buttons.append(firstBtn)
-//        y += firstBtn.frame.size.height
-        
-//        let secondBtn = UIButton(type: .Custom)
-//        //        firstBtn.frame = CGRect(x: 0, y: y, width: dimen, height: 44)
-//        secondBtn.frame = CGRect(x: 0, y: frame.size.height, width: dimen, height: 44)
-//        secondBtn.tag = Int(y)
-//        secondBtn.backgroundColor = .blueColor()
-//        view.addSubview(secondBtn)
-//        self.buttons.append(secondBtn)
-//        y += secondBtn.frame.size.height
-        
-        
         self.view = view
     }
     
