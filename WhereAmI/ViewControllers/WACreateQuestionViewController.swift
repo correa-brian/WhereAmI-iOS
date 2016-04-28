@@ -103,7 +103,7 @@ class WACreateQuestionViewController: WAViewController, UITextFieldDelegate, UII
                                        delay: 0,
                                        usingSpringWithDamping: 0.5,
                                        initialSpringVelocity: 0.0,
-                                       options: .CurveEaseIn,
+                                       options: .CurveEaseInOut,
                                        animations: {
                                         
                                         print("Animations Here")
