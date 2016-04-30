@@ -16,6 +16,7 @@ class WACreateQuestionViewController: WAViewController, UITextFieldDelegate, UII
     var textFields = Array<UITextField>()
     var loadingScreen: UIView!
     var spinner: UIActivityIndicatorView!
+    var btnSelectImage: UIButton!
 
     override func loadView() {
         
@@ -28,14 +29,17 @@ class WACreateQuestionViewController: WAViewController, UITextFieldDelegate, UII
         var dimension = frame.size.width-2*padding
         
         self.questionImage = UIImageView(frame: CGRect(x: padding, y: y, width: dimension, height: dimension))
-        self.questionImage.backgroundColor = UIColor(red: 148/255, green: 158/255, blue: 194/255, alpha: 1)
+//        self.questionImage.backgroundColor = UIColor(red: 148/255, green: 158/255, blue: 194/255, alpha: 0)
+        self.questionImage.image = UIImage(named: "uploadphoto.png")
+        self.questionImage.alpha = 0
         view.addSubview(self.questionImage)
         
-        let btnSelectImage = UIButton(frame: CGRect(x: padding, y: y, width: dimension, height: 44))
-        btnSelectImage.backgroundColor = UIColor(red: 152/255, green: 207/25, blue: 166/255, alpha: 0.65)
-        btnSelectImage.setTitle("Tap to Select Image", forState: .Normal)
-        btnSelectImage.addTarget(self, action: #selector(WACreateQuestionViewController.takePicture(_:)), forControlEvents: .TouchUpInside)
-        view.addSubview(btnSelectImage)
+        self.btnSelectImage = UIButton(frame: CGRect(x: padding, y: y, width: dimension, height: 44))
+        self.btnSelectImage.backgroundColor = UIColor(red: 152/255, green: 207/25, blue: 166/255, alpha: 0.65)
+        self.btnSelectImage.setTitle("Tap to Select Image", forState: .Normal)
+        self.btnSelectImage.alpha = 0
+        self.btnSelectImage.addTarget(self, action: #selector(WACreateQuestionViewController.takePicture(_:)), forControlEvents: .TouchUpInside)
+        view.addSubview(self.btnSelectImage)
         
         y += self.questionImage.frame.size.height+14
         
@@ -100,13 +104,12 @@ class WACreateQuestionViewController: WAViewController, UITextFieldDelegate, UII
     func animateTextFields(){
         for i in 0..<self.textFields.count {
             UIView.animateWithDuration(1.35,
-                                       delay: 0,
+                                       delay: (0.5+Double(i)*0.1),
                                        usingSpringWithDamping: 0.5,
                                        initialSpringVelocity: 0.0,
                                        options: .CurveEaseInOut,
                                        animations: {
                                         
-                                        print("Animations Here")
                                         let textField = self.textFields[i]
                                         var textFieldFrame = textField.frame
                                         textFieldFrame.origin.y = CGFloat(textField.tag)
@@ -114,6 +117,19 @@ class WACreateQuestionViewController: WAViewController, UITextFieldDelegate, UII
                 },
                                        completion: nil)
         }
+        
+        UIView.animateWithDuration(2.50,
+                                   delay: 1.5,
+                                   usingSpringWithDamping: 0.5,
+                                   initialSpringVelocity: 0.0,
+                                   options: .CurveEaseInOut,
+                                   animations: {
+                                    
+                                    self.questionImage.alpha = 1
+                                
+                                    self.btnSelectImage.alpha = 1
+            },
+                                   completion: nil)
         
     }
 

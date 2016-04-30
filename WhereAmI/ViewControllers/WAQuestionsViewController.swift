@@ -105,6 +105,26 @@ class WAQuestionsViewController: WAViewController, UICollectionViewDelegate, UIC
         }
     }
     
+//    Alamofire.request(.GET, url, parameters: nil).responseJSON { response in
+//    let json = JSON(response.result.value!)
+//    let results = json["results"].arrayObject!
+//    
+//    for i in 0..<results.count {
+//    let info = results[i] as! Dictionary<String, AnyObject>
+//    print("\(info)")
+//    
+//    let question = WAQuestion()
+//    question.populate(info)
+//    self.questions.append(question)
+//    }
+//    
+//    dispatch_async(dispatch_get_main_queue(), {
+//    self.collectionView.reloadData()
+//    })
+//    }
+//    
+//}
+    
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBarHidden = false
