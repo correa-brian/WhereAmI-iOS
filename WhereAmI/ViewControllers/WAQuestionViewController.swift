@@ -25,7 +25,7 @@ class WAQuestionViewController: WAViewController {
         self.questionImage.image = self.question.imageData
         view.addSubview(questionImage)
         
-        let padding = CGFloat(6)
+        let padding = CGFloat(18)
         var y = dimen + padding
         let height = CGFloat(44)
         let width = dimen-2*padding

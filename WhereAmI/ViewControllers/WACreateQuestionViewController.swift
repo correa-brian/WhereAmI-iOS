@@ -43,7 +43,7 @@ class WACreateQuestionViewController: WAViewController, UITextFieldDelegate, UII
         
         y += self.questionImage.frame.size.height+14
         
-        padding = CGFloat(14)
+        padding = CGFloat(26)
         
         dimension = frame.size.width
         let width = dimension-2*padding
